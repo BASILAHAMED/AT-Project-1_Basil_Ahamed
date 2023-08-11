@@ -25,6 +25,7 @@ class TestLogin:
         assert dashboard == 'Dashboard'
         print("SUCCESS # LOGGED IN WITH USERNAME {username} and PASSWORD {password}".format(username=login_data.LoginData.username, password=login_data.LoginData.password))
 
+    # test for invalid login
     def test_invalid_login(self, launch_driver):
         self.driver.get(self.url)
         self.driver.find_element(by=By.XPATH, value=login_data.ElementLocators.xpath_username).send_keys(login_data.LoginData.username)
