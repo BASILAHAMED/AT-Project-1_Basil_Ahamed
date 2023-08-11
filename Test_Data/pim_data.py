@@ -10,7 +10,7 @@ class PersonalDetails:
     # pim1
     first_name = "Ajith"
     last_name = "Kumar"
-    employee_id = "0872"
+    employee_id = "4563"
     employee1_id = "0786"
     employee_other_id = "27486312"
     license_number = "110579"
@@ -19,7 +19,7 @@ class PersonalDetails:
 
     # pim2
     employee_search = "Ajith Kumar"
-    updated_employee_id = "9876"
+    updated_employee_id = "4565"
     updated_employee_other_id = "355"
     updated_license_number = "0528"
     updated_license_expiry_date = "1995-12-10"
@@ -63,6 +63,7 @@ class ElementLocators:
     xpath_edited_id = '//div[3]/div/div[2]/div/div/div[2]/div'
 
     # pim3
+    xpath_one_record_found = '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span'
     xpath_delete_button = '//button[@class="oxd-icon-button oxd-table-cell-action-space"][1]'
     xpath_delete_alert = '//button[@class="oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin"]'
     xpath_confirm_no_records = '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span'

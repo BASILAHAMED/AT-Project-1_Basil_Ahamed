@@ -1,6 +1,10 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from Test_Data import pim_data
 import pytest
 
@@ -124,7 +128,7 @@ class TestLogin:
 
         # assert employee id equals to edited employee id
         fetch = self.driver.find_element(by=By.XPATH, value=pim_data.ElementLocators.xpath_edited_id).text
-        assert fetch == "9876"
+        assert fetch == pim_data.PersonalDetails.updated_employee_id
         print("SUCCESS # EMPLOYEE \"{first_name} {last_name}\" DETAILS EDITED".format(
             first_name=pim_data.PersonalDetails.first_name.upper(),
             last_name=pim_data.PersonalDetails.last_name.upper()))
@@ -139,6 +143,10 @@ class TestLogin:
 
         # click search button
         self.driver.find_element(by=By.XPATH, value=pim_data.ElementLocators.xpath_save_button).click()
+
+        # wait until employee selected
+        wait = WebDriverWait(self.driver, 10)
+        one_record_found = wait.until(EC.text_to_be_present_in_element((By.XPATH, pim_data.ElementLocators.xpath_one_record_found), text_="(1) Record Found"))
 
         # click delete employee button
         self.driver.find_element(by=By.XPATH, value=pim_data.ElementLocators.xpath_delete_button).click()
