@@ -15,10 +15,3 @@ Folder Description
 There are two Folders,
 1.Test_Codes # It consists of Test Files (i.e. test_login, test_pim)
 2.Test_Data # It consists of Test Data's (i.e. username, password, XPATH, ID, etc.,)
-
-
-COMMAND TO RUN A TEST FILE
---------------------------
-
-pytest -v -s --capture=sys --html=C:\Users\test_result.html
-pytest -v -s --capture=sys --html=C:\Users\sbasi\Automation\Try\Python-Automation-Professional-Coding-main\reports\test_basil.html
