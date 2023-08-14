@@ -13,5 +13,7 @@ Total 05
 
 Folder Description
 There are two Folders,
-1.Test_Codes # It consists of Test Files (i.e. test_login, test_pim)
-2.Test_Data # It consists of Test Data's (i.e. username, password, XPATH, ID, etc.,)
+1.Tests # contains Test Files (i.e. test_login, test_pim)
+2. Config # contains Test Data's (i.e. username, password, XPATH, ID, etc.,)
+3. Pages # contains the methods associated with each webpages
+4. Reports # contains HTML and CSS files which are generated as test reports.
